@@ -51,10 +51,10 @@ find_package(catkin REQUIRED COMPONENTS
 # Generate messages in the 'msg' folder
  add_message_files(
    FILES
-   PosDetection.msg
-   PosDetections.msg
-   Track.msg
-   Tracks.msg
+   DetectedObject.msg
+   DetectedObjects.msg
+   TrackedObject.msg
+   TrackedObjects.msg
    Trajectory.msg
    Trajectories.msg
  )

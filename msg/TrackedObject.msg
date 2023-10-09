@@ -8,8 +8,8 @@ bool        matched                     # Is track matched with a detection at t
 # bool      occluded/detectable
 
 # Semantic properties
-uint32[]    class_id                    # Integer array corresponding to the object's class
-float64[]   class_confidence            # Array of the detector's classification confidence
+uint32    class_id                    # Integer corresponding to the object's class
+float64   class_confidence            # Detector's classification confidence
 
 # Spatial properties
 geometry_msgs/PoseWithCovariance      pose            # Estimated position and orientation
