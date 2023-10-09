@@ -4,6 +4,7 @@ time        time_created                # When the track was initialized
 time        last_updated                # When last detection was received
 uint64      track_id                    # Unique identifier for this tracked object
 bool        matched                     # Is track matched with a detection at this timestep?
+uint64      detection_id                # Unique identifier for the matched detection
 # uint64    det_id
 # bool      occluded/detectable
 
