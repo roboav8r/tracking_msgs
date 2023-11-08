@@ -1,3 +1,3 @@
 # Tracked objects at an instance in time
-Header          header
+std_msgs/Header          header
 TrackedObject[]         tracks
