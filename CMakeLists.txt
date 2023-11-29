@@ -6,18 +6,23 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 endif()
 
 # find dependencies
-find_package(rosidl_default_generators REQUIRED)
 find_package(ament_cmake REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(vision_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(builtin_interfaces REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
+  "msg/Detection3D.msg"
+  "msg/Detections3D.msg"
+  "msg/Track3D.msg"
+  "msg/Tracks3D.msg"
   "msg/DetectedObject.msg"
   "msg/DetectedObjects.msg"
   "msg/TrackedObject.msg"
   "msg/TrackedObjects.msg"
-  DEPENDENCIES geometry_msgs # Add packages that above messages depend on, in this case geometry_msgs for Sphere.msg
+  DEPENDENCIES geometry_msgs builtin_interfaces vision_msgs # Add packages that above messages depend on, in this case geometry_msgs for Sphere.msg
 )
 
 if(BUILD_TESTING)
