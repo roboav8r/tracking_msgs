@@ -18,11 +18,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Detections3D.msg"
   "msg/Track3D.msg"
   "msg/Tracks3D.msg"
-  "msg/DetectedObject.msg"
-  "msg/DetectedObjects.msg"
-  "msg/TrackedObject.msg"
-  "msg/TrackedObjects.msg"
-  DEPENDENCIES geometry_msgs builtin_interfaces vision_msgs # Add packages that above messages depend on, in this case geometry_msgs for Sphere.msg
+  DEPENDENCIES geometry_msgs builtin_interfaces vision_msgs # Add packages that above messages depend on
 )
 
 if(BUILD_TESTING)
