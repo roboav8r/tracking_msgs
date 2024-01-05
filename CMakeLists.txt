@@ -10,6 +10,7 @@ find_package(ament_cmake REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(vision_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(diagnostic_msgs REQUIRED)
 find_package(builtin_interfaces REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
@@ -18,7 +19,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Detections3D.msg"
   "msg/Track3D.msg"
   "msg/Tracks3D.msg"
-  DEPENDENCIES geometry_msgs builtin_interfaces vision_msgs # Add packages that above messages depend on
+  DEPENDENCIES geometry_msgs builtin_interfaces vision_msgs diagnostic_msgs # Add packages that above messages depend on
 )
 
 if(BUILD_TESTING)
